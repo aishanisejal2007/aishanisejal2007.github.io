@@ -1,0 +1,29 @@
+const fs = require('fs');
+const path = require('path');
+
+const indexHtmlPath = path.resolve('..', 'aishani sejal-portfolio', 'portfolio', 'index.html');
+
+const indexHtml = `<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aishani Sejal — Computer Science and Engineering – B (CSE-B) | 3rd Semester</title>
+    <meta name="description" content="Academic portfolio of Aishani Sejal, 3rd Semester Computer Science and Engineering – B (CSE-B) student. Coursework activities, programming foundations, and coding practice." />
+    <meta name="author" content="Aishani Sejal" />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Newsreader -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#FAF9F6] text-[#18181B] antialiased selection:bg-purple-100 selection:text-purple-900 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+`;
+
+fs.writeFileSync(indexHtmlPath, indexHtml, 'utf8');
+console.log('index.html successfully updated with clean title and metadata!');
