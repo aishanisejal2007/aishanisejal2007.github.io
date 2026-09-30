@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Mail } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './icons/SocialIcons';
+import { GithubIcon } from './icons/SocialIcons';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -12,45 +12,38 @@ export const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           
-          {/* Brand & Copyright */}
+          {/* Brand & Student Info */}
           <div className="flex flex-col items-center md:items-start gap-1">
             <span className="font-serif font-bold text-stone-900 text-base">
               Aishani Sejal
             </span>
             <p className="text-xs text-stone-500">
-              © Aishani Sejal. All rights reserved.
+              Computer Science and Engineering – B (CSE-B) • 3rd Semester
             </p>
           </div>
 
-          {/* Social Links */}
+          {/* Links & Back to Top */}
           <div className="flex items-center gap-5">
             <a
-              href="https://github.com/aishanisejal2007/C-Mini-project"
+              href="https://github.com/aishanisejal2007"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-stone-600 hover:text-purple-800 transition-colors rounded-md hover:bg-stone-100"
+              className="p-2 text-stone-600 hover:text-purple-800 transition-colors rounded-md hover:bg-stone-100 flex items-center gap-1.5 text-xs font-medium"
               aria-label="GitHub Profile"
-              title="GitHub"
+              title="GitHub Profile"
             >
               <GithubIcon className="w-4 h-4" />
-            </a>
-
-            <a
-              href="#contact"
-              className="p-2 text-stone-600 hover:text-purple-800 transition-colors rounded-md hover:bg-stone-100 flex items-center gap-1.5 text-xs font-medium"
-              title="LinkedIn: Aishani Sejal"
-            >
-              <LinkedinIcon className="w-4 h-4" />
-              <span className="hidden sm:inline">Aishani Sejal</span>
+              <span>GitHub</span>
             </a>
 
             <a
               href="mailto:aishanisejal@gmail.com"
-              className="p-2 text-stone-600 hover:text-purple-800 transition-colors rounded-md hover:bg-stone-100"
+              className="p-2 text-stone-600 hover:text-purple-800 transition-colors rounded-md hover:bg-stone-100 flex items-center gap-1.5 text-xs font-medium"
               aria-label="Email Aishani Sejal"
               title="Email"
             >
               <Mail className="w-4 h-4" />
+              <span>Email</span>
             </a>
 
             <div className="w-px h-4 bg-stone-300 mx-1" aria-hidden="true" />

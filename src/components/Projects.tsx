@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Terminal, Cpu, CheckCircle } from 'lucide-react';
+import { ArrowUpRight, GitBranch, Terminal, Users, Code2 } from 'lucide-react';
 import { GithubIcon } from './icons/SocialIcons';
 
 export const Projects: React.FC = () => {
@@ -11,231 +11,241 @@ export const Projects: React.FC = () => {
         <div className="flex flex-col space-y-2 mb-14">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-800">
             <span className="w-1.5 h-1.5 rounded-full bg-purple-700" />
-            <span>03 / Selected Work</span>
+            <span>02 / Coursework</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold font-serif tracking-tight text-stone-900">
-            Featured Projects
+            Projects / Activities
           </h2>
           <p className="text-sm sm:text-base text-stone-500 max-w-2xl">
-            Detailed technical breakdowns of projects built in C systems programming and embedded IoT hardware.
+            Documented academic activities covering development environment setup, version control, collaboration, and algorithmic practice.
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-10">
           
           {/* =========================================================
-              PROJECT 1: Simple Line Editor (Technical Case Study)
+              ACTIVITY 1: VS Code Setup and Hello World
              ========================================================= */}
-          <article className="bg-[#FAF9F6] border border-stone-200/90 rounded-xl p-6 sm:p-8 lg:p-10 transition-all hover:border-purple-300 hover:shadow-xs">
-            {/* Header / Meta */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-stone-200">
+          <article className="bg-[#FAF9F6] border border-stone-200/90 rounded-xl p-6 sm:p-8 transition-all hover:border-purple-300 hover:shadow-xs">
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-stone-200">
               <div className="flex items-center gap-3">
-                <span className="px-2.5 py-1 rounded bg-purple-100/70 border border-purple-200/80 text-purple-900 text-xs font-semibold uppercase tracking-wider">
-                  Case Study 01
+                <span className="px-2.5 py-1 rounded bg-stone-200/80 border border-stone-300/80 text-stone-800 text-xs font-semibold uppercase tracking-wider">
+                  Activity 01
                 </span>
                 <span className="text-xs text-stone-500 font-medium">
-                  Systems & CLI Utility
+                  Development Environment Setup
                 </span>
               </div>
-
-              <a
-                href="https://github.com/Aishvarrya777/Line_Editor"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-stone-900 text-stone-50 hover:bg-purple-900 text-xs sm:text-sm font-medium transition-colors"
-              >
-                <GithubIcon className="w-4 h-4" />
-                <span>View on GitHub</span>
-                <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
-              </a>
             </div>
 
-            {/* Title & Description */}
-            <div className="mt-6 space-y-3">
+            <div className="mt-5 space-y-3">
               <div className="flex items-center gap-2.5">
                 <div className="p-2 rounded bg-stone-100 text-stone-800">
                   <Terminal className="w-5 h-5 text-purple-800" />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold font-serif text-stone-900">
-                  Simple Line Editor
+                <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900">
+                  Activity 1 – VS Code Setup and Hello World
                 </h3>
               </div>
-              <p className="text-stone-600 text-base max-w-3xl leading-relaxed">
-                A command-line text editor built in C that enables users to insert, delete, display, save, and load lines of text interactively from the terminal.
+              <p className="text-stone-700 text-sm sm:text-base leading-relaxed max-w-3xl">
+                I set up Visual Studio Code as my development environment and created and tested a basic Hello World C program. I learned the basic workflow of creating, running, and verifying a program.
               </p>
             </div>
 
-            {/* Structured Case Study Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-6 border-t border-stone-200/70">
-              
-              {/* Problem */}
-              <div className="space-y-2 bg-[#F6F5F0]/60 p-4 rounded-lg border border-stone-200/60">
-                <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 block">
-                  The Problem
-                </span>
-                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                  Handling text documents in a console environment requires dynamic memory allocation rather than rigid, fixed-size buffers, while ensuring operations like insertion, deletion, and file persistence remain safe and reliable.
-                </p>
-              </div>
-
-              {/* What It Does */}
-              <div className="space-y-2 bg-[#F6F5F0]/60 p-4 rounded-lg border border-stone-200/60">
-                <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 block">
-                  What It Does
-                </span>
-                <ul className="text-xs sm:text-sm text-stone-700 space-y-1.5">
-                  <li className="flex items-center gap-1.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-purple-700 shrink-0" />
-                    <span>Insert text at target line index</span>
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-purple-700 shrink-0" />
-                    <span>Delete specific lines with buffer shift</span>
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-purple-700 shrink-0" />
-                    <span>Display buffered text in order</span>
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-purple-700 shrink-0" />
-                    <span>Save to and load from disk files</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Technical Approach */}
-              <div className="space-y-2 bg-[#F6F5F0]/60 p-4 rounded-lg border border-stone-200/60">
-                <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 block">
-                  Technical Approach
-                </span>
-                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                  Implemented via dynamic pointer-to-pointer arrays (<code className="text-[11px] bg-stone-200/80 px-1 py-0.5 rounded font-mono text-purple-900">char**</code>) to manage variable-length lines. Reallocates memory dynamically as text grows, avoiding buffer overflows. Integrates standard file I/O operations for disk synchronization.
-                </p>
-              </div>
-
-            </div>
-
-            {/* Technologies */}
-            <div className="mt-6 pt-5 border-t border-stone-200 flex flex-wrap items-center gap-2">
-              <span className="text-xs font-medium text-stone-500 mr-2">Technologies:</span>
+            <div className="mt-5 pt-4 border-t border-stone-200 flex flex-wrap items-center gap-2">
+              <span className="text-xs font-medium text-stone-500 mr-2">Key Competencies:</span>
               <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
-                C
+                VS Code
               </span>
-              <span className="px-2.5 py-1 rounded bg-purple-100/60 text-purple-900 text-xs font-medium">
-                Dynamic Array of Strings
+              <span className="px-2.5 py-1 rounded bg-purple-100/70 text-purple-900 text-xs font-medium">
+                C Programming
               </span>
               <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
-                File Handling
-              </span>
-              <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
-                CLI Interface
+                Program Verification
               </span>
             </div>
           </article>
 
 
           {/* =========================================================
-              PROJECT 2: Smart Storage Box using Cloud Database
+              ACTIVITY 2: Git & GitHub Setup
              ========================================================= */}
-          <article className="bg-[#FAF9F6] border border-stone-200/90 rounded-xl p-6 sm:p-8 lg:p-10 transition-all hover:border-purple-300 hover:shadow-xs">
-            {/* Header / Meta */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-stone-200">
+          <article className="bg-[#FAF9F6] border border-stone-200/90 rounded-xl p-6 sm:p-8 transition-all hover:border-purple-300 hover:shadow-xs">
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-stone-200">
               <div className="flex items-center gap-3">
-                <span className="px-2.5 py-1 rounded bg-stone-200/70 border border-stone-300/80 text-stone-800 text-xs font-semibold uppercase tracking-wider">
-                  Project 02
+                <span className="px-2.5 py-1 rounded bg-purple-100/70 border border-purple-200/80 text-purple-900 text-xs font-semibold uppercase tracking-wider">
+                  Activity 02
                 </span>
                 <span className="text-xs text-stone-500 font-medium">
-                  Embedded Systems & IoT
+                  Version Control & Repository Management
                 </span>
               </div>
+
+              <a
+                href="https://github.com/aishanisejal2007/Hello-World-c"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-stone-900 text-stone-50 hover:bg-purple-900 text-xs sm:text-sm font-medium transition-colors"
+              >
+                <GithubIcon className="w-4 h-4" />
+                <span>View Repository</span>
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
+              </a>
             </div>
 
-            {/* Title & Description */}
-            <div className="mt-6 space-y-3">
+            <div className="mt-5 space-y-3">
               <div className="flex items-center gap-2.5">
                 <div className="p-2 rounded bg-stone-100 text-stone-800">
-                  <Cpu className="w-5 h-5 text-purple-800" />
+                  <GitBranch className="w-5 h-5 text-purple-800" />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold font-serif text-stone-900">
-                  Smart Storage Box using Cloud Database
+                <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900">
+                  Activity 2 – Git & GitHub Setup
                 </h3>
               </div>
-              <p className="text-stone-600 text-base max-w-3xl leading-relaxed">
-                An embedded physical storage box prototype that integrates sensor authentication, motorized access, audio-visual feedback, and cloud database connectivity.
+              <p className="text-stone-700 text-sm sm:text-base leading-relaxed max-w-3xl">
+                I learned the fundamentals of Git and GitHub and used them to maintain my Hello World C project. I created a public GitHub repository named Hello-World-c, added my C program and project documentation, committed the changes, and pushed the project to GitHub.
               </p>
             </div>
 
-            {/* Technical Detail & Hardware Breakdown */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 pt-6 border-t border-stone-200/70">
-              
-              {/* Architecture & What it does */}
-              <div className="space-y-3 bg-[#F6F5F0]/60 p-5 rounded-lg border border-stone-200/60">
-                <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 block">
-                  System Architecture & Operation
-                </span>
-                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                  The system centers around an ESP32 microcontroller governing access to a physical storage compartment. An RFID / MFRC522 reader authenticates user tags, triggering a servo motor to control the locking mechanism. Operational status is output on an LCD display, accompanied by auditory alerts from a piezo buzzer.
-                </p>
-                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                  The ESP32 communicates device state to a cloud database managed through the Blynk platform, synchronizing access events.
-                </p>
-              </div>
-
-              {/* Known Components & Hardware Specifications */}
-              <div className="space-y-3 bg-[#F6F5F0]/60 p-5 rounded-lg border border-stone-200/60">
-                <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 block">
-                  Configured Hardware & Components
-                </span>
-                <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm">
-                  <div className="flex items-center gap-2 p-2 rounded bg-stone-100/70 text-stone-800">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-700" />
-                    <span>ESP32 MCU</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 rounded bg-stone-100/70 text-stone-800">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-700" />
-                    <span>RFID / MFRC522</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 rounded bg-stone-100/70 text-stone-800">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-700" />
-                    <span>LCD Display</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 rounded bg-stone-100/70 text-stone-800">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-700" />
-                    <span>Servo Motor</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 rounded bg-stone-100/70 text-stone-800">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-700" />
-                    <span>Piezo Buzzer</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 rounded bg-stone-100/70 text-stone-800">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-700" />
-                    <span>Blynk Cloud DB</span>
-                  </div>
-                </div>
-              </div>
-
+            <div className="mt-4 p-3.5 rounded-lg bg-[#F6F5F0] border border-stone-200/80 flex items-center gap-2 text-xs sm:text-sm text-stone-700">
+              <span className="font-semibold text-purple-900 shrink-0">Repository:</span>
+              <a
+                href="https://github.com/aishanisejal2007/Hello-World-c"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-purple-900 hover:underline break-all"
+              >
+                https://github.com/aishanisejal2007/Hello-World-c
+              </a>
             </div>
 
-            {/* Technologies */}
-            <div className="mt-6 pt-5 border-t border-stone-200 flex flex-wrap items-center gap-2">
-              <span className="text-xs font-medium text-stone-500 mr-2">Technologies & Components:</span>
+            <div className="mt-5 pt-4 border-t border-stone-200 flex flex-wrap items-center gap-2">
+              <span className="text-xs font-medium text-stone-500 mr-2">Key Competencies:</span>
               <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
-                ESP32
-              </span>
-              <span className="px-2.5 py-1 rounded bg-purple-100/60 text-purple-900 text-xs font-medium">
-                RFID / MFRC522
+                Git
               </span>
               <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
-                LCD
+                GitHub
+              </span>
+              <span className="px-2.5 py-1 rounded bg-purple-100/70 text-purple-900 text-xs font-medium">
+                C Programming
+              </span>
+            </div>
+          </article>
+
+
+          {/* =========================================================
+              ACTIVITY 3: GitLens & Live Share
+             ========================================================= */}
+          <article className="bg-[#FAF9F6] border border-stone-200/90 rounded-xl p-6 sm:p-8 transition-all hover:border-purple-300 hover:shadow-xs">
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-stone-200">
+              <div className="flex items-center gap-3">
+                <span className="px-2.5 py-1 rounded bg-stone-200/80 border border-stone-300/80 text-stone-800 text-xs font-semibold uppercase tracking-wider">
+                  Activity 03
+                </span>
+                <span className="text-xs text-stone-500 font-medium">
+                  Collaborative Development
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-5 space-y-3">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded bg-stone-100 text-stone-800">
+                  <Users className="w-5 h-5 text-purple-800" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900">
+                  Activity 3 – GitLens & Live Share
+                </h3>
+              </div>
+              <p className="text-stone-700 text-sm sm:text-base leading-relaxed max-w-3xl">
+                I used GitLens to explore Git history and used Live Share for collaborative programming. The Hello World C project was extended by adding a greet() function. This activity helped me understand version history and collaborative development.
+              </p>
+            </div>
+
+            <div className="mt-5 pt-4 border-t border-stone-200 flex flex-wrap items-center gap-2">
+              <span className="text-xs font-medium text-stone-500 mr-2">Key Competencies:</span>
+              <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
+                GitLens
               </span>
               <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
-                Servo Motor
+                Live Share
+              </span>
+              <span className="px-2.5 py-1 rounded bg-purple-100/70 text-purple-900 text-xs font-medium">
+                Git
               </span>
               <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
-                Piezo Buzzer
+                VS Code
               </span>
-              <span className="px-2.5 py-1 rounded bg-purple-100/60 text-purple-900 text-xs font-medium">
-                Blynk / Cloud Database
+            </div>
+          </article>
+
+
+          {/* =========================================================
+              ACTIVITY 4: LeetCode Practice Repository
+             ========================================================= */}
+          <article className="bg-[#FAF9F6] border border-stone-200/90 rounded-xl p-6 sm:p-8 transition-all hover:border-purple-300 hover:shadow-xs">
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-stone-200">
+              <div className="flex items-center gap-3">
+                <span className="px-2.5 py-1 rounded bg-purple-100/70 border border-purple-200/80 text-purple-900 text-xs font-semibold uppercase tracking-wider">
+                  Activity 04
+                </span>
+                <span className="text-xs text-stone-500 font-medium">
+                  Problem Solving & DSA Practice
+                </span>
+              </div>
+
+              <a
+                href="https://github.com/aishanisejal2007/leetcode-solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-stone-900 text-stone-50 hover:bg-purple-900 text-xs sm:text-sm font-medium transition-colors"
+              >
+                <GithubIcon className="w-4 h-4" />
+                <span>View Repository</span>
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
+              </a>
+            </div>
+
+            <div className="mt-5 space-y-3">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded bg-stone-100 text-stone-800">
+                  <Code2 className="w-5 h-5 text-purple-800" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900">
+                  Activity 4 – LeetCode Practice Repository
+                </h3>
+              </div>
+              <p className="text-stone-700 text-sm sm:text-base leading-relaxed max-w-3xl">
+                I created and maintained a GitHub repository for my LeetCode coding practice. The repository contains documented coding solutions and progress across areas such as arrays, strings, basic algorithms, stacks, and linked lists.
+              </p>
+            </div>
+
+            <div className="mt-4 p-3.5 rounded-lg bg-[#F6F5F0] border border-stone-200/80 flex items-center gap-2 text-xs sm:text-sm text-stone-700">
+              <span className="font-semibold text-purple-900 shrink-0">Repository:</span>
+              <a
+                href="https://github.com/aishanisejal2007/leetcode-solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-purple-900 hover:underline break-all"
+              >
+                https://github.com/aishanisejal2007/leetcode-solutions
+              </a>
+            </div>
+
+            <div className="mt-5 pt-4 border-t border-stone-200 flex flex-wrap items-center gap-2">
+              <span className="text-xs font-medium text-stone-500 mr-2">Key Competencies:</span>
+              <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
+                Problem Solving
+              </span>
+              <span className="px-2.5 py-1 rounded bg-purple-100/70 text-purple-900 text-xs font-medium">
+                Arrays and Strings
+              </span>
+              <span className="px-2.5 py-1 rounded bg-purple-100/70 text-purple-900 text-xs font-medium">
+                Basic Data Structures and Algorithms
+              </span>
+              <span className="px-2.5 py-1 rounded bg-stone-200/60 text-stone-800 text-xs font-medium">
+                GitHub
               </span>
             </div>
           </article>

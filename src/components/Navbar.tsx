@@ -15,10 +15,8 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
+    { name: 'Projects / Activities', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Education', href: '#education' },
-    { name: 'Achievements', href: '#achievements' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -48,7 +46,7 @@ export const Navbar: React.FC = () => {
               Aishani Sejal
             </span>
             <span className="text-[11px] text-stone-500 font-medium tracking-wide">
-              Computer Science Student
+              3rd Semester • CSE-B
             </span>
           </div>
         </a>
@@ -69,7 +67,7 @@ export const Navbar: React.FC = () => {
             href="#contact"
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs lg:text-sm font-medium text-purple-900 bg-purple-50 hover:bg-purple-100/80 border border-purple-200/70 rounded-md transition-colors"
           >
-            <span>Let's Connect</span>
+            <span>Contact</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-purple-700" />
           </a>
         </nav>
@@ -106,7 +104,7 @@ export const Navbar: React.FC = () => {
                 onClick={handleLinkClick}
                 className="flex items-center justify-center gap-1.5 w-full px-4 py-2 text-sm font-medium text-purple-900 bg-purple-50 hover:bg-purple-100 border border-purple-200 rounded-md transition-colors"
               >
-                <span>Let's Connect</span>
+                <span>Contact</span>
                 <ArrowUpRight className="w-4 h-4 text-purple-700" />
               </a>
             </div>
